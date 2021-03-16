@@ -1,0 +1,234 @@
+/* My css add now*/
+.containeradd10x{
+	background:#161b22; 
+
+}
+.bodyxyz{
+	background-color: #0d1117;
+}
+.btnvz1{
+	margin-right: 15px;
+}
+.removex1{
+	width: 100px;
+	height: 37px;
+	color: #58a6ff;
+	background: #065fd4;
+	border: 0;
+	font-family: sans-serif;
+	align-items: right;
+    border-radius: 2px;
+}
+
+.box12{
+    border-color: #30363d;
+    border-style: solid;
+    border-width: 1px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+
+}
+.box123{
+    border-color: #30363d;
+    border-style: solid;
+    border-width: 1px;
+    border-top-width:0px; 
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+
+}
+.box1 { 
+    border-color: #30363d;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 6px;
+}
+.box4 { 
+    border-color: #30363d;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+.ytd-searchboxz1{
+	color:#58a6ff;
+	position: relative;
+	border-right: none;
+	border-radius: 2px 0 0 2px;
+	padding: 2px 6px;
+	flex-direction:row;
+	flex:1;
+	display: flex;
+	background-color: #0d1117;
+	border:1px solid #0d1117;
+}
+.playlist-items101{
+
+	background-color: #0d1117;
+	height: 100%;
+	padding: 4px 0;
+	overflow-y: auto;
+
+}
+.ytp-swatch-background-color:hover {
+ animation: animate 8s linear infinite;
+}
+@keyframes animate {
+ 0% {
+  background-position: 0%;
+ }
+ 100% {
+  background-position: 400%;
+ }
+}
+.ytp-swatch-background-color:before {
+ content: '';
+ position: absolute;
+ top: -5px;
+ bottom: -5px;
+ right: -5px;
+ left: -5px;
+ z-index: -1;
+ background: linear-gradient(90deg, #03a9f4, #f441a4, #ffeb3b, #03a9f4);
+ background-size: 400%;
+ 
+ filter: blur(5px);
+ opacity: 0;
+ transition: 0.5s;
+}
+.ytp-swatch-background-color:hover:before {
+ filter: blur(5px);
+ opacity: 1;
+ animation: animate 8s linear infinite;
+}
+.ytd-searchbox:hover {
+ animation: animate 8s linear infinite;
+}
+@keyframes animate {
+ 0% {
+  background-position: 0%;
+ }
+ 100% {
+  background-position: 400%;
+ }
+}
+.ytd-searchbox:before {
+ content: '';
+ position: absolute;
+ top: -5px;
+ bottom: -5px;
+ right: -5px;
+ left: -5px;
+ z-index: -1;
+ background: linear-gradient(90deg, #03a9f4, #f441a4, #ffeb3b, #03a9f4);
+ background-size: 400%;
+ 
+ filter: blur(30px);
+ opacity: 0;
+ transition: 0.5s;
+}
+.ytd-searchbox:hover:before {
+ filter: blur(30px);
+ opacity: 1;
+ animation: animate 8s linear infinite;
+}
+
+.glow:hover {
+ animation: animate 8s linear infinite;
+}
+@keyframes animate {
+ 0% {
+  background-position: 0%;
+ }
+ 100% {
+  background-position: 400%;
+ }
+}
+.glow:before {
+ content: '';
+ position: absolute;
+ top: -5px;
+ bottom: -5px;
+ right: -5px;
+ left: -5px;
+ z-index: -1;
+ background: linear-gradient(90deg, #03a9f4, #f441a4, #ffeb3b, #03a9f4);
+ background-size: 400%;
+ filter: blur(30px);
+ opacity: 0;
+ transition: 0.5s;
+}
+.glow:hover:before {
+ filter: blur(30px);
+ opacity: 1;
+ animation: animate 8s linear infinite;
+}
+
+/* Hide by Element */
+
+ytd-promoted-video-renderer,
+ytd-movie-offer-module-renderer,
+ytd-promoted-sparkles-text-search-renderer,
+ytd-player-legacy-desktop-watch-ads-renderer {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Hide by ID */
+
+#player-ads,
+#search-pva,
+#premium-yva,
+#masthead-ad,
+#feedmodule-PRO,
+#video-masthead,
+#watch-buy-urls,
+#sub-frame-error,
+#main-frame-error,
+#watch7-sidebar-ads,
+#feed-pyv-container,
+#shelf-pyv-container,
+#watch-branded-actions,
+#watch-channel-brand-div,
+#homepage-chrome-side-promo,
+#watch-channel-brand-div-text {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Hide by Class */
+
+.iv-promo,
+.video-ads,
+.promoted-videos,
+.ytp-ad-progress,
+.ytp-ad-progress-list,
+.searchView.list-view,
+.html5-ad-progress-list,
+.watch-extra-info-right,
+.watch-extra-info-column,
+.lohp-pyv-shelf-container,
+.ytd-merch-shelf-renderer,
+.carousel-offer-url-container,
+.youtubeSuperLeaderBoardAdHolder,
+.youtubeSuperLeaderOverallAdArea,
+.ytd-movie-offer-module-renderer,
+.ytd-action-companion-ad-renderer {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Hide by Rule */
+
+iframe[id^=ad_],
+div[class*="-ad-v"],
+div[class*="-ads-"],
+a[href*="/adwords/"],
+a[href*="doubleclick.net"],
+iframe[src*="doubleclick.net"],
+a[href^="http://www.youtube.com/cthru?"],
+a[href^="https://www.youtube.com/cthru?"],
+a[onclick*="\"ping_url\":\"http://www.google.com/aclk?"] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
