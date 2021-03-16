@@ -1,0 +1,59 @@
+body {
+  border: 0;
+  width: 600px;
+  padding: 5px;
+  font-size: 12px;
+  margin: 10px auto;
+  align-items: center;
+  font-family: arial, sans-serif;
+}
+
+table {
+  color: #555;
+  height: 100%;
+  margin: auto;
+  font-size: 12px;
+  border-spacing: 0;
+  font-family: arial, sans-serif;
+}
+
+table tr td {
+  padding: 0 10px;
+  text-align: justify;
+  vertical-align: middle;
+}
+
+input[type="checkbox"] {
+  float: right;
+  margin: 0 5px 0 0;
+  vertical-align: middle;
+}
+
+span {
+  vertical-align: middle;
+}
+
+.title {
+  width: 128px;
+  height: 128px;
+}
+
+.note {
+  margin: 0;
+  color: #777;
+  line-height: 18px;
+  padding: 10px 0 0 0;
+}
+
+.content {
+  margin: auto;
+  width: calc(100% - 10px);
+  border: solid 1px rgba(0,0,0,0.05);
+}
+
+.logo {
+  width: 100%;
+  height: 128px;
+  background: url('../icons/128.png') no-repeat center center;
+  background-size: 64px;
+}
