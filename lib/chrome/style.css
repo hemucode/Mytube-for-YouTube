@@ -2,7 +2,7 @@
   color: #05f72e;
 }
 .ex-body {
-  width: 300px;
+  width: 400px;
   margin: 10px;
   padding: 0px 0px 10px 0px;
 
@@ -25,10 +25,12 @@ html,body {
 }
 .top-label {
   background: #000000;
-  color:white;
-  border-radius: 2px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+    color: white;
+    font-family: cursive;
+    border-radius: 2px;
+    font-size: 15px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 .title {
   border-bottom: 1px solid #ecf0f1;
