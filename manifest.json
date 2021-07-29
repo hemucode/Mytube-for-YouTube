@@ -1,36 +1,37 @@
 {
    "background": {
-      "page": "lib/chrome/background.html"
+      "page": "pages/background.html"
    },
    "browser_action": {
-      "default_icon": "data/icons/128.png",
-      "default_popup": "lib/chrome/popup.html",
-      "default_title": "Mytube for Youtube™"
+      "default_icon": "images/128.png",
+      "default_popup": "pages/popup.html",
+      "default_title": "__MSG_app_name__"
    },
    "content_scripts": [ {
       "all_frames": true,
-      "css": [ "data/content_script/inject.css" ],
-      "js": [ "data/content_script/inject.js" ],
+      "css": [ "styles/inject.css" ],
+      "js": [ "scripts/inject.js" ],
       "matches": [ "*://*.youtube.com/*" ],
       "run_at": "document_start"
-   } ],
-   "description": "Removes all annoying ads and banners from YouTube!",
+   } ],   
+   "default_locale": "en",
+   "description": "__MSG_app_description__",
    "homepage_url": "https://www.youtube.com/watch?v=dJTeEhwUzrg",
    "icons": {
-      "128": "data/icons/128.png",
-      "16": "data/icons/16.png",
-      "32": "data/icons/32.png",
-      "48": "data/icons/48.png",
-      "64": "data/icons/64.png"
+      "128": "images/128.png",
+      "16": "images/16.png",
+      "32": "images/32.png",
+      "48": "images/48.png",
+      "64": "images/64.png"
    },
    "manifest_version": 2,
-   "name": "Mytube for YouTube™",
+   "name": "__MSG_app_name__",
    "options_ui": {
       "chrome_style": true,
       "open_in_tab": true,
-      "page": "data/options/options.html"
+      "page": "pages/options.html"
    },
    "permissions": [ "storage", "webRequest", "http://*/*", "https://*/*", "webRequestBlocking" ],
-   "short_name": "mytube-for-youtube",
-   "version": "4.20.8"
+   "short_name": "VideoAdblock",
+   "version": "4.20.9"
 }

@@ -1,74 +1,24 @@
-/* My css add now*/
-.containeradd10x{
-	background:#161b22; 
-
-}
-.bodyxyz{
-	background-color: #0d1117;
-}
+/*!
+ *  Mytube for youtube by @thegayen - https://github.com/Codehemanta/Mytube-for-YouTube/ - @fontawesome
+ *  License - https://github.com/Codehemanta/Mytube-for-YouTube/license ( CSS: MIT License)
+ */
 .btnvz1{
-	margin-right: 15px;
+    margin-right: 15px;
 }
 .removex1{
-	width: 100px;
-	height: 37px;
-	color: #58a6ff;
-	background: #065fd4;
-	border: 0;
-	font-family: sans-serif;
-	align-items: right;
+    width: 100px;
+    height: 37px;
+    color: #58a6ff;
+    background: #065fd4;
+    border: 0;
+    font-family: sans-serif;
+    align-items: right;
     border-radius: 2px;
 }
+#footer-text.ytd-commentbox{
+    text-align: right !important;
+}
 
-.box12{
-    border-color: #30363d;
-    border-style: solid;
-    border-width: 1px;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-
-}
-.box123{
-    border-color: #30363d;
-    border-style: solid;
-    border-width: 1px;
-    border-top-width:0px; 
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-
-}
-.box1 { 
-    border-color: #30363d;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 6px;
-}
-.box4 { 
-    border-color: #30363d;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 3px;
-}
-.ytd-searchboxz1{
-	color:#58a6ff;
-	position: relative;
-	border-right: none;
-	border-radius: 2px 0 0 2px;
-	padding: 2px 6px;
-	flex-direction:row;
-	flex:1;
-	display: flex;
-	background-color: #0d1117;
-	border:1px solid #0d1117;
-}
-.playlist-items101{
-
-	background-color: #0d1117;
-	height: 100%;
-	padding: 4px 0;
-	overflow-y: auto;
-
-}
 .ytp-swatch-background-color:hover {
  animation: animate 8s linear infinite;
 }
@@ -231,4 +181,77 @@ a[onclick*="\"ping_url\":\"http://www.google.com/aclk?"] {
   display: none !important;
   visibility: hidden !important;
 }
+
+/* Primary Background */
+ytd-app,
+#guide-content.ytd-app,
+.playlist-items.ytd-playlist-panel-renderer,
+#chips.ytd-feed-filter-chip-bar-renderer,
+#chips-wrapper.ytd-feed-filter-chip-bar-renderer,
+#left-arrow-button.ytd-feed-filter-chip-bar-renderer,
+#right-arrow-button.ytd-feed-filter-chip-bar-renderer,
+#container.ytd-searchbox,
+#search-icon-legacy.ytd-searchbox,
+#left-arrow.ytd-feed-filter-chip-bar-renderer,
+#right-arrow.ytd-feed-filter-chip-bar-renderer,
+ytd-playlist-sidebar-renderer,
+ytd-item-section-renderer,
+ytd-alert-with-button-renderer[type=INFO], 
+ytd-alert-with-button-renderer[type=SUCCESS],#primary.ytd-two-column-browse-results-renderer,
+#tabs-inner-container.ytd-c4-tabbed-header-renderer,ytd-browse[page-subtype=channels]{
+    background: #0d1117 !important;
+}
+
+/* Secondary Background */
+ytd-masthead,
+.sbsb_a,.sbdd_b,
+yt-chip-cloud-renderer,
+ytd-merch-shelf-renderer,
+.header.ytd-playlist-panel-renderer,
+#left-arrow-button.yt-chip-cloud-renderer, 
+#right-arrow-button.yt-chip-cloud-renderer,
+#channel-header.ytd-c4-tabbed-header-renderer,
+ytd-two-column-browse-results-renderer[page-subtype=history] #secondary.ytd-two-column-browse-results-renderer{
+    background: #161b22 !important;
+}
+
+
+/* Primary Font Color */
+yt-formatted-string,
+#container.ytd-searchbox input.ytd-searchbox,
+.gsfs{
+    color: #58a6ff !important;
+}
+
+/* Secondary Font Color */
+span,yt-icon,.ytd-guide-entry-renderer{
+    color: #d2a8ff !important;
+}
+
+/* Others Font Color */
+a,ytd-text-header-renderer{
+    color: #606060 !important;
+}
+
+#left-arrow.ytd-feed-filter-chip-bar-renderer,
+#right-arrow.ytd-feed-filter-chip-bar-renderer,
+#left-arrow.yt-chip-cloud-renderer, 
+#right-arrow.yt-chip-cloud-renderer{    
+    position: initial !important;
+}
+
+#container.ytd-searchbox,
+#search-icon-legacy.ytd-searchbox{
+    border: 1px solid #58a6ff !important;
+    box-shadow : none !important;
+}
+
+#container.ytd-searchbox{ 
+    border-radius: 4px 0 4px 0 !important;
+}
+#search-icon-legacy.ytd-searchbox{
+    border-radius: 0 4px 4px 0 !important;
+
+}
+
 
