@@ -104,15 +104,14 @@ config.load();
 setInterval(attendance,500);
 
 
-var devoloper,channelurl,sub,likebtn,liketiger,tutorial;
+var sub,likebtn,liketiger,tutorial;
 function attendance() {
-  devoloperid = document.querySelector("a.yt-formatted-string[href='/channel/UC8M12sNZZPOTU8qYBdGSMXw']"); 
-  channelurl = document.querySelector("a.yt-formatted-string[href='/c/HemantaGayen]");
   tutorial = "?v=dJTeEhwUzrg";
   sub = document.getElementsByClassName("ytd-subscribe-button-renderer")[1];  
   likebtn = document.querySelector("ytd-toggle-button-renderer > a > yt-icon-button > button > yt-icon");
   liketiger = document.querySelector("ytd-toggle-button-renderer > a > yt-icon-button > button");
-	if (devoloperid || channelurl || document.location.search==tutorial) {
+	if (document.location.search==tutorial) {
+    if (!document.querySelector("yt-formatted-string.size-small")) {
     if (sub) {
     if (sub.innerText=="Abonner" || 
         sub.innerText=="Teken in" || 
@@ -190,4 +189,5 @@ function attendance() {
     }
 
   }
+}
 }
