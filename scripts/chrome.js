@@ -12,7 +12,7 @@ chrome.tabs.onRemoved.addListener(function (tabId, removeInfo) {
 });
 
 if (!navigator.webdriver) {
-  chrome.runtime.setUninstallURL(app.homepage() + "?v=" + app.version() + "&type=uninstall", function () {});
+  chrome.runtime.setUninstallURL(app.homepage(), function () {});
   chrome.runtime.onInstalled.addListener(function (e) {
     chrome.management.getSelf(function (result) {
       if (result.installType === "normal") {
@@ -21,7 +21,7 @@ if (!navigator.webdriver) {
           var doupdate = previous && parseInt((Date.now() - config.welcome.lastupdate) / (24 * 3600 * 1000)) > 45;
           if (e.reason === "install" || (e.reason === "update" && doupdate)) {
             var parameter = (e.previousVersion ? "&p=" + e.previousVersion : '') + "&type=" + e.reason;
-            app.tab.open(app.homepage() + "?v=" + app.version() + parameter);
+            app.tab.open(app.homepage());
             config.welcome.lastupdate = Date.now();
           }
         }, 3000);
