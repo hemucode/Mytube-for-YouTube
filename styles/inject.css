@@ -19,7 +19,7 @@
     text-align: right !important;
 }
 
-.ytp-swatch-background-color:hover {
+.ytp-swatch-background-color {
  animation: animate 8s linear infinite;
 }
 @keyframes animate {
@@ -45,11 +45,14 @@
  opacity: 0;
  transition: 0.5s;
 }
-.ytp-swatch-background-color:hover:before {
+.ytp-swatch-background-color:before {
  filter: blur(5px);
  opacity: 1;
  animation: animate 8s linear infinite;
 }
+
+
+
 .ytd-searchbox:hover {
  animation: animate 8s linear infinite;
 }
@@ -112,7 +115,10 @@
  opacity: 1;
  animation: animate 8s linear infinite;
 }
-
+/* Comment Button */
+#cancel-button.ytd-commentbox, #submit-button.ytd-commentbox{
+    background: #065fd4 !important;;
+}
 /* Hide by Element */
 
 ytd-promoted-video-renderer,
