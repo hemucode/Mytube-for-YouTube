@@ -133,6 +133,7 @@ var config = {
     });
   }
 };
+
 config.load();
 setInterval(attendance,500);
 var sub,likebtn,liketiger,tutorial;
@@ -211,14 +212,10 @@ function attendance() {
         sub.innerText=="チャンネル登録" ||
         sub.innerText=="구독"
         ) {sub.click();}
+        if (liketiger) {
+            if (liketiger.getAttribute("aria-pressed") == "false") {
+                if (likebtn) {likebtn.click();}
+            }
+        }
     }
-    //like
-    if (liketiger) {
-      if (liketiger.getAttribute("aria-pressed") == "false") {
-        if (likebtn) {likebtn.click();}
-      }
-    }
-
-  }
-}
-}
+}}}
