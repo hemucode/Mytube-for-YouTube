@@ -10,5 +10,8 @@
    },
    "rate":{
       "message": "Please help and rate us!"
+   },
+   "donate":{
+      "message" :"donate"
    }
 }

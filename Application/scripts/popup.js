@@ -1,6 +1,7 @@
 domReady(() => {
   translateHTML()
   initRateButton()
+  donateButton()
 })
 
 function domReady (callback) {
@@ -22,4 +23,7 @@ function translateHTML (dataKey = 'message') {
 
 function initRateButton() {
   document.querySelector('.teaser').href = `https://microsoftedge.microsoft.com/addons/detail/mytube-for-youtube%E2%84%A2/jfbcahnffhbepgccnkchdacpcabbalde`;
+}
+function donateButton() {
+  document.querySelector('.teaserz').href = `https://www.paypal.com/paypalme/hemantagayen`;
 }

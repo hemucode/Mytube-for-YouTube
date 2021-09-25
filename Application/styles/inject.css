@@ -40,7 +40,6 @@
  z-index: -1;
  background: linear-gradient(90deg, #03a9f4, #f441a4, #ffeb3b, #03a9f4);
  background-size: 400%;
- 
  filter: blur(5px);
  opacity: 0;
  transition: 0.5s;
@@ -117,8 +116,18 @@
 }
 /* Comment Button */
 #cancel-button.ytd-commentbox, #submit-button.ytd-commentbox{
-    background: #065fd4 !important;;
+    background: #065fd4 !important;
 }
+
+/* webkit-scrollbar */
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to top, #008aff, #00ffe7);
+}
+::-webkit-scrollbar{
+    background: #0d1117 !important;
+}
+
+
 /* Hide by Element */
 
 ytd-promoted-video-renderer,
@@ -211,6 +220,8 @@ ytd-alert-with-button-renderer[type=SUCCESS],#primary.ytd-two-column-browse-resu
 /* Secondary Background */
 ytd-masthead,
 .sbsb_a,.sbdd_b,
+ytd-mini-guide-renderer,
+ytd-mini-guide-entry-renderer,
 yt-chip-cloud-renderer,
 ytd-merch-shelf-renderer,
 .header.ytd-playlist-panel-renderer,

@@ -1,11 +1,17 @@
 .online{
   color: #05f72e;
 }
+* {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: -moz-none;
+    -o-user-select: none;
+    user-select: none;
+}
 .ex-body {
   width: 400px;
   margin: 10px;
   padding: 0px 0px 10px 0px;
-
 }
 
 html,body {
@@ -15,7 +21,6 @@ html,body {
   margin: 0px;
   padding: 0px;
 }
-
 .btn {
   cursor: pointer;
 }
@@ -57,6 +62,12 @@ html,body {
   text-align: center;
   margin-top: 5px;
 }
+a{
+  text-decoration: none;
+}
+.teaserz{
+  margin-left: 10px;
+}
 .id{
     height: 30px;
     border-radius: 5px;
@@ -64,6 +75,7 @@ html,body {
     font-size: 15px;
     border: 1px solid #cecece;
     color: #6596b7;
+
 }
 .id:hover{ 
   color: #576d84;
