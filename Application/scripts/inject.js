@@ -59,26 +59,13 @@ window[_0x1f528d(0x17c)][_0x1f528d(0x155)] == 'www.youtube.com' && (setInterval(
 
 
 function autoadd() {
-    const _0x2b9df5 = _0x1f528d,
-        _0x14e0ef = document[_0x2b9df5(0x128)]('div#contenteditable-root');
-    _0x14e0ef && _0x14e0ef[_0x2b9df5(0x143)](_0x2b9df5(0x163), _0x2b9df5(0x16d));
-    const _0x1cd4ed = document[_0x2b9df5(0x14b)]('removex1')[0x2],
-        _0x44992a = document['getElementsByClassName']('removex1')[0x0],
-        _0x428edd = document[_0x2b9df5(0x14b)](_0x2b9df5(0x154))[0x1];
-    _0x428edd && (_0x428edd[_0x2b9df5(0x13d)] = function () {
-        autocmmantfun();
-    });
-    _0x44992a && (_0x44992a[_0x2b9df5(0x13d)] = function () {
-        botruncmmd();
-    });
-    _0x1cd4ed && _0x1cd4ed[_0x2b9df5(0x122)]();
-    const _0x44528d = document[_0x2b9df5(0x128)](_0x2b9df5(0x186));
-    _0x44528d && (_0x44528d['onclick'] = function () {
-        addautobtn();
-    }, autobuttonaction());
+    if (document.querySelector("#contenteditable-root")) {
+        document.querySelector("#contenteditable-root").onclick = function () {
+            addautobtn();autobuttonaction();
+        }
+    }
 }
 
-function autocmmantfun() {}
 
 function addautobtn() {
     const _0xa0905 = _0x1f528d,
