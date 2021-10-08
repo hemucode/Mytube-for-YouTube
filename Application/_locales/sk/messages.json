@@ -10,5 +10,8 @@
    },
    "rate": {
       "message" :"Pomôžte nám a ohodnoťte nás!"
+   },
+   "donate":{
+      "message" :"darovanie"
    }
 }

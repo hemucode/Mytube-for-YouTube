@@ -10,5 +10,8 @@
    },
    "rate": {
       "message" :"Lūdzu, palīdziet un novērtējiet mūs"
+   },
+   "donate":{
+      "message" :"ziedojums"
    }
 }

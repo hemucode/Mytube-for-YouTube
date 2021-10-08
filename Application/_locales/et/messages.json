@@ -10,5 +10,8 @@
    },
    "rate": {
       "message" :"Palun aidake ja hinnake meid"
+   },
+   "donate":{
+      "message" :"annetus"
    }
 }

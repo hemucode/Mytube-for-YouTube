@@ -10,5 +10,8 @@
    },
    "rate": {
       "message" :"Hãy giúp đỡ và đánh giá chúng tôi!"
+   },
+   "donate":{
+      "message" :"Quyên góp"
    }
 }

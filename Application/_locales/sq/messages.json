@@ -10,5 +10,8 @@
    },
    "rate": {
       "message" :"Ju lutemi na ndihmoni dhe na vlerësoni!"
+   },
+   "donate":{
+      "message" :"dhurim"
    }
 }

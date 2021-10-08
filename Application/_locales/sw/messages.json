@@ -10,5 +10,8 @@
    },
    "rate": {
       "message" :"Tafadhali tusaidie na utupime!"
+   },
+   "donate":{
+      "message" :"mchango"
    }
 }

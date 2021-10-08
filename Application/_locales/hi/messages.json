@@ -4,5 +4,8 @@
    },
    "app_name": {
       "message": "Mytube for Youtube™"
+   },
+   "donate":{
+      "message" :"दान"
    }
 }

@@ -10,6 +10,9 @@
    },
    "rate": {
       "message" :"Tolong bantu dan nilai kami"
+   },
+   "donate":{
+      "message" :"sumbangan"
    }
 
 }

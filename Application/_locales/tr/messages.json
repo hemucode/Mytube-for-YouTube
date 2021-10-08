@@ -10,5 +10,8 @@
    },
    "rate": {
       "message" :"Lütfen yardım edin ve bize puan verin!"
+   },
+   "donate":{
+      "message" :"Bağış"
    }
 }

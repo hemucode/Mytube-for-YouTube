@@ -10,5 +10,8 @@
    },
    "rate": {
       "message" :"Ajudeu-nos i valoreu-nos"
+   },
+   "donate":{
+      "message" :"donació"
    }
 }

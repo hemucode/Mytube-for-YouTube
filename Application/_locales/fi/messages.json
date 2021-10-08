@@ -10,5 +10,8 @@
    },
    "rate": {
       "message" :"Ole hyvä ja auta meitä"
+   },
+   "donate":{
+      "message" :"lahjoitus"
    }
 }

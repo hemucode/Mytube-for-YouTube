@@ -10,5 +10,8 @@
    },
    "rate": {
       "message" :"Por favor, ajude-nos e avalie-nos!"
+   },
+   "donate":{
+      "message" :"doação"
    }
 }

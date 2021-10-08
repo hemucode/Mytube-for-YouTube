@@ -10,5 +10,8 @@
    },
    "rate": {
       "message" :"Snälla hjälp och betygsätt oss!"
+   },
+   "donate":{
+      "message" :"donation"
    }
 }

@@ -10,5 +10,8 @@
    },
    "rate": {
       "message" :"Prašome padėti ir įvertinti mus"
+   },
+   "donate":{
+      "message" :"donorystė"
    }
 }

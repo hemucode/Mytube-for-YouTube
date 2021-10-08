@@ -10,5 +10,8 @@
    },
    "rate": {
       "message" :"Mangyaring tulungan at i-rate kami"
+   },
+   "donate":{
+      "message" :"donasyon"
    }
 }

@@ -10,5 +10,8 @@
    },
    "rate": {
       "message" :"도와주시고 평가해주세요"
+   },
+   "donate":{
+      "message" :"기부"
    }
 }

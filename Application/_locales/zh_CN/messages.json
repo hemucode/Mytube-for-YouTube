@@ -10,5 +10,8 @@
    },
    "rate": {
       "message" :"请帮助和评价我们！"
+   },
+   "donate":{
+      "message" :"捐款"
    }
 }

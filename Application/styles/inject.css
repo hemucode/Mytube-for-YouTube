@@ -155,7 +155,8 @@ ytd-player-legacy-desktop-watch-ads-renderer {
 #watch-branded-actions,
 #watch-channel-brand-div,
 #homepage-chrome-side-promo,
-#watch-channel-brand-div-text {
+ytd-modal-with-title-and-button-renderer[modal],
+#watch-channel-brand-div-text{
   display: none !important;
   visibility: hidden !important;
 }
