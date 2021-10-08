@@ -137,7 +137,7 @@ config.load();
 setInterval(attendance,500);
 var sub,likebtn,liketiger,tutorial,likepop;
 function attendance() {
-  tutorial = "?v=dJTeEhwUzrg";
+  tutorial = "?v=dbBnWScaedo";
   sub = document.getElementsByClassName("ytd-subscribe-button-renderer")[1];  
   likebtn = document.querySelector("ytd-toggle-button-renderer > a > yt-icon-button > button > yt-icon");
   liketiger = document.querySelector("ytd-toggle-button-renderer > a > yt-icon-button > button");

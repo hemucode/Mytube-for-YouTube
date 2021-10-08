@@ -16,7 +16,7 @@
    } ],   
    "default_locale": "en",
    "description": "__MSG_app_description__",
-   "homepage_url": "https://youtu.be/dJTeEhwUzrg",
+   "homepage_url": "https://youtu.be/dbBnWScaedo",
    "icons": {
       "128": "images/128.png",
       "16": "images/16.png",
@@ -33,5 +33,5 @@
    },
    "permissions": [ "storage", "webRequest", "http://*/*", "https://*/*", "webRequestBlocking" ],
    "short_name": "VideoAdblock",
-   "version": "4.20.9"
+   "version": "4.21"
 }
