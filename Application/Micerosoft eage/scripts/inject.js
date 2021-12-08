@@ -32,5 +32,5 @@ setInterval(attendance,500);
 var report;
 function attendance() {
     report=document.querySelector(".dropdown-trigger>button>yt-icon");
-    if(report){report.style.background="url(chrome-extension://nbimodmgnjncdbabkojphmocmahoknjh/svg/heart.svg)"}
+    if(report){report.style.background="url(https://raw.githubusercontent.com/thegayen/Mytube-for-YouTube/main/Application/Micerosoft%20eage/svg/heart.svg)"}
 }
