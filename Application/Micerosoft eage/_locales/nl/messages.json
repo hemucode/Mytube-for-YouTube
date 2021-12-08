@@ -1,0 +1,17 @@
+{
+   "app_description": {
+      "message": "Verwijdert alle vervelende advertenties en banners van YouTube!"
+   },
+   "app_name": {
+      "message": "Mytube for Youtube™"
+   },
+   "full_description": {
+      "message": "Mytube for Youtube™ is een browserextensie voor het filteren van inhoud en het blokkeren van advertenties die alle advertenties op Youtube™ blokkeert. Hiermee kunnen gebruikers voorkomen dat pagina-elementen, zoals advertenties, worden weergegeven. Banners, advertentieclips of zelfs preroll-advertenties die u gewoonlijk ziet voordat de eigenlijke video op YouTube wordt geblokkeerd door deze extensie. ontwikkelaar door thegayen"
+   },
+   "rate": {
+      "message" :"Help ons alstublieft en beoordeel ons"
+   },
+   "donate":{
+      "message" :"bijdrage"
+   }
+}
