@@ -1,0 +1,29 @@
+{
+   "action": {
+      "default_popup": "popup.html"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "css": [ "content-style.css" ],
+      "js": [ "bundled-content-script.js" ],
+      "matches": [ "*://youtube.com/*", "*://www.youtube.com/*", "*://m.youtube.com/*","*://*.music.youtube.com/*" ]
+   } ],
+   "description": "Removes all annoying ads and banners from YouTube!",
+   "externally_connectable": {
+      "matches": [ "*://*.youtube.com/*" ]
+   },
+   "host_permissions": [ "*://*.youtube.com/*" ],
+   "icons": {
+      "128": "icons/128.png",
+      "48": "icons/48.png"
+   },
+   "manifest_version": 3,
+   "name": "MyTube for YouTube™",
+   "version": "4.27.0.2",
+   "web_accessible_resources": [ {
+      "matches": [ "*://*.youtube.com/*" ],
+      "resources": ["svg/heart.svg"]
+   } ]
+}
