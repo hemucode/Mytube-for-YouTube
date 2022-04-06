@@ -33,5 +33,5 @@
    },
    "permissions": [ "storage", "webRequest", "http://*/*", "https://*/*", "webRequestBlocking" ],
    "short_name": "VideoAdblock",
-   "version": "4.21"
+   "version": "4.22"
 }
