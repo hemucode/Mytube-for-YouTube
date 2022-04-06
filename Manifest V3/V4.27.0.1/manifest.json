@@ -19,6 +19,7 @@
       "128": "icons/128.png",
       "48": "icons/48.png"
    },
+   "homepage_url": "https://mybrowseraddon.com/custom-page-zoom.html",
    "manifest_version": 3,
    "name": "MyTube for YouTube™",
    "version": "4.27.0.1",
