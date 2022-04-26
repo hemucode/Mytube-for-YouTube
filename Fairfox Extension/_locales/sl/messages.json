@@ -1,0 +1,17 @@
+{
+   "app_description": {
+      "message": "Odstrani vse nadležne oglase in pasice iz YouTuba!"
+   },
+   "app_name": {
+      "message": "Mytube za Youtube™"
+   },
+   "full_description": {
+      "message": "Mytube za Youtube™ je razširitev brskalnika za filtriranje in blokiranje oglasov, ki blokira vse oglase na Youtube ™. Uporabnikom omogoča, da preprečijo prikaz elementov strani, na primer oglasov. Ta razširitev blokira pasice, oglasne posnetke ali celo predoglasne oglase, ki jih običajno vidite, preden dejanski videoposnetek na Youtube blokira. devoloper od thegayen"
+   },
+   "rate": {
+      "message" :"Prosimo, pomagajte in nas ocenite!"
+   },
+   "donate":{
+      "message" :"darovanje"
+   }
+}

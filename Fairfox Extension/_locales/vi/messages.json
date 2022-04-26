@@ -1,0 +1,17 @@
+{
+   "app_description": {
+      "message": "Loại bỏ tất cả các quảng cáo và biểu ngữ khó chịu khỏi YouTube!"
+   },
+   "app_name": {
+      "message": "Mytube cho Youtube™"
+   },
+   "full_description": {
+      "message": "Mytube cho Youtube™ là một tiện ích mở rộng trình duyệt chặn quảng cáo và lọc nội dung, chặn tất cả các quảng cáo trên Youtube ™. Nó cho phép người dùng ngăn các thành phần của trang, chẳng hạn như quảng cáo, hiển thị. Banner, Ad-Clips hoặc thậm chí các quảng cáo preroll mà bạn thường thấy trước khi video thực trên Youtube bị chặn bởi tiện ích mở rộng này. devoloper bởi thegayen"
+   },
+   "rate": {
+      "message" :"Hãy giúp đỡ và đánh giá chúng tôi!"
+   },
+   "donate":{
+      "message" :"Quyên góp"
+   }
+}

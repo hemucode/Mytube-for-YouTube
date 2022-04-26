@@ -1,0 +1,17 @@
+{
+   "app_description": {
+      "message": "Elimină toate reclamele și bannere enervante de pe YouTube!"
+   },
+   "app_name": {
+      "message": "Mytube pentru Youtube™"
+   },
+   "full_description": {
+      "message": "Mytube pentru Youtube™ este o extensie de browser de filtrare a conținutului și blocare a anunțurilor care blochează toate anunțurile de pe Youtube ™. Permite utilizatorilor să împiedice afișarea elementelor paginii, cum ar fi reclamele. Banner, clipuri publicitare sau chiar anunțuri preroll pe care le vedeți de obicei înainte ca videoclipul real de pe YouTube să fie blocat de această extensie. devoloper de thegayen"
+   },
+   "rate": {
+      "message" :"Vă rugăm să ne ajutați și să ne evaluați!"
+   },
+   "donate":{
+      "message" :"donare"
+   }
+}

@@ -1,0 +1,17 @@
+{
+   "app_description": {
+      "message": "Usuwa wszystkie irytujące reklamy i banery z YouTube!"
+   },
+   "app_name": {
+      "message": "Mytube na Youtube™"
+   },
+   "full_description": {
+      "message": "Mytube na Youtube™ to rozszerzenie przeglądarki do filtrowania treści i blokowania reklam, które blokuje wszystkie reklamy w serwisie Youtube™. Pozwala użytkownikom zapobiegać wyświetlaniu elementów strony, takich jak reklamy. Banery, klipy reklamowe, a nawet reklamy przed filmem, które zwykle widzisz, zanim rzeczywisty film na Youtube jest blokowany przez to rozszerzenie. devoloper autorstwa thegayen"
+   },
+   "rate": {
+      "message" :"Pomóż i oceń nas!"
+   },
+   "donate":{
+      "message" :"darowizna"
+   }
+}
