@@ -1,0 +1,17 @@
+{
+   "app_description": {
+      "message": "Huondoa matangazo na mabango yote yanayokasirisha kutoka YouTube!"
+   },
+   "app_name": {
+      "message": "Mytube kwa Youtube™"
+   },
+   "full_description": {
+      "message": "Mytube kwa Youtube™ ni kichujio cha yaliyomo na kiboreshaji cha kivinjari kinachozuia matangazo ambayo huzuia matangazo yote kwenye Youtube ™ .Inaruhusu watumiaji kuzuia vitu vya ukurasa, kama vile matangazo, visionyeshwe. Bendera, Sehemu za matangazo au hata matangazo ya mapema ambayo kawaida huona kabla ya video halisi kwenye Youtube kuzuiwa na kiendelezi hiki. devoloper na thegayen"
+   },
+   "rate": {
+      "message" :"Tafadhali tusaidie na utupime!"
+   },
+   "donate":{
+      "message" :"mchango"
+   }
+}

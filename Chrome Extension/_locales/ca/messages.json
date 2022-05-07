@@ -1,0 +1,17 @@
+{
+   "app_description": {
+      "message": "Elimina tots els anuncis i els bàners molestos de YouTube"
+   },
+   "app_name": {
+      "message": "Mytube per a Youtube™"
+   },
+   "full_description": {
+      "message": "Mytube per a Youtube™ és una extensió de navegador de filtratge i bloqueig de contingut que bloqueja tots els anuncis de Youtube ™. Permet evitar que es mostrin elements de la pàgina, com ara anuncis. Aquesta extensió bloqueja els anuncis publicitaris, els clips publicitaris o fins i tot els anuncis prerrollos que normalment veieu abans que el vídeo real a Youtube. devoloper per thegayen"
+   },
+   "rate": {
+      "message" :"Ajudeu-nos i valoreu-nos"
+   },
+   "donate":{
+      "message" :"donació"
+   }
+}

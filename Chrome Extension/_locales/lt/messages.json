@@ -1,0 +1,17 @@
+{
+   "app_description": {
+      "message": "Pašalina visus erzinančius skelbimus ir reklamjuostes iš „YouTube“"
+   },
+   "app_name": {
+      "message": "„YouTube“ vaizdo „MyTube“"
+   },
+   "full_description": {
+      "message": "„YouTube“ vaizdo „MyTube“ yra turinio filtravimo ir skelbimų blokavimo naršyklės plėtinys, kuris blokuoja visus „Youtube ™“ skelbimus. Tai leidžia vartotojams užkirsti kelią rodyti puslapio elementus, pvz., Reklamas. Šis plėtinys užblokuoja reklamjuostę, „Ad-Clips“ ar net iš anksto pateikiamus skelbimus, kuriuos paprastai matote prieš tikrąjį „YouTube“ vaizdo įrašą. devoloper by thegayen"
+   },
+   "rate": {
+      "message" :"Prašome padėti ir įvertinti mus"
+   },
+   "donate":{
+      "message" :"donorystė"
+   }
+}
