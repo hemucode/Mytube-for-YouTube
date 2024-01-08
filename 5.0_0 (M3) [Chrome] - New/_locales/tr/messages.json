@@ -5,12 +5,6 @@
    "app_name": {
       "message": "Mytube için Youtube™"
    },
-   "donate": {
-      "message": "Bağış"
-   },
-   "full_description": {
-      "message": "Mytube için Youtube™ üzerindeki tüm reklamları engelleyen bir içerik filtreleme ve reklam engelleme tarayıcı uzantısıdır. Kullanıcıların, reklamlar gibi sayfa öğelerinin görüntülenmesini engellemesine olanak tanır. Genellikle Youtube'daki asıl videodan önce gördüğünüz Banner, Reklam Klipleri ve hatta preroll reklamları bu uzantı tarafından engellenir. geliştirici tarafından thegayen"
-   },
    "rate": {
       "message": "Lütfen yardım edin"
    }

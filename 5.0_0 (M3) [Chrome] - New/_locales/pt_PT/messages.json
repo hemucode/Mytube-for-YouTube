@@ -5,12 +5,6 @@
    "app_name": {
       "message": "Mytube para Youtube™"
    },
-   "donate": {
-      "message": "doação"
-   },
-   "full_description": {
-      "message": "Mytube para Youtube ™ é uma extensão de navegador de filtragem de conteúdo e bloqueio de anúncios que bloqueia todos os anúncios no Youtube ™. Ele permite que os usuários impeçam a exibição de elementos da página, como anúncios. Banner, Ad-Clips ou mesmo anúncios precedentes que você costuma ver antes do vídeo real no Youtube são bloqueados por esta extensão. Devoloper by thegayen"
-   },
    "rate": {
       "message": "ajude-nos e avalie-nos!"
    }
