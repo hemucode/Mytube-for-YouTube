@@ -1,6 +1,6 @@
 /*!
- *  Mytube for youtube by @thegayen - https://github.com/hemucode/Mytube-for-YouTube/ - @fontawesome
- *  License - https://github.com/hemucode/Mytube-for-YouTube/license ( CSS: MIT License)
+ *  Mytube for youtube by @thegayen - https://github.com/Codegayen/Mytube-for-YouTube/ - @fontawesome
+ *  License - https://github.com/Codegayen/Mytube-for-YouTube/license ( CSS: MIT License)
  */
 #button.ytd-menu-renderer yt-icon.ytd-menu-renderer{
   background-image: url(chrome-extension://__MSG_@@extension_id__/svg/heart.svg)!important;
@@ -184,6 +184,7 @@ ytd-modal-with-title-and-button-renderer[modal],
 .ytp-ad-progress-list,
 .searchView.list-view,
 .html5-ad-progress-list,
+.ytd-display-ad-renderer,
 .watch-extra-info-right,
 .watch-extra-info-column,
 .lohp-pyv-shelf-container,
