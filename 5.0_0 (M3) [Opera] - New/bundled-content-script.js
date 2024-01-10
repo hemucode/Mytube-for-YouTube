@@ -51,7 +51,12 @@ async function preference() {
 
 
       styleCode = `
-      html {
+
+#button.ytd-menu-renderer yt-icon.ytd-menu-renderer{
+  background-image: url(chrome-extension://__MSG_@@extension_id__/svg/heart.svg)!important;
+}
+
+html {
   --yt-spec-text-primary: #0f0f0f !important;
   --yt-spec-text-primary-inverse: #fff !important;
   --yt-spec-base-background: #0f0f0f !important;
@@ -121,29 +126,29 @@ async function preference() {
   --yt-spec-brand-background-primary: rgba(33, 33, 33, 0.98) !important;
   --yt-spec-brand-background-secondary: rgba(33, 33, 33, 0.95) !important;
   --yt-spec-general-background-a: #181818 !important;
-  --yt-spec-general-background-b: #0f0f0f;
-  --yt-spec-general-background-c: #030303;
-  --yt-spec-error-background: #f9f9f9;
-  --yt-spec-10-percent-layer: rgba(255, 255, 255, 0.1);
-  --yt-spec-snackbar-background: #030303;
-  --yt-spec-snackbar-background-updated: #f9f9f9;
-  --yt-spec-badge-chip-background: rgba(255, 255, 255, 0.1);
-  --yt-spec-verified-badge-background: rgba(255, 255, 255, 0.25);
-  --yt-spec-call-to-action-faded: rgba(62, 166, 255, 0.3);
-  --yt-spec-call-to-action-hover: #6ebcff;
-  --yt-spec-brand-button-background-hover: #990412;
-  --yt-spec-brand-link-text-faded: rgba(255, 78, 69, 0.3);
-  --yt-spec-filled-button-focus-outline: rgba(255, 255, 255, 0.7);
-  --yt-spec-static-overlay-button-hover: rgba(255, 255, 255, 0.5);
-  --yt-spec-mono-filled-hover: #d9d9d9;
-  --yt-spec-commerce-filled-hover: #65b8ff;
-  --yt-spec-mono-tonal-hover: rgba(255, 255, 255, 0.2);
-  --yt-spec-commerce-tonal-hover: #515561;
-  --yt-spec-static-overlay-filled-hover: #e6e6e6;
-  --yt-spec-static-overlay-tonal-hover: rgba(255, 255, 255, 0.2);
-  --yt-spec-paper-tab-ink: rgba(255, 255, 255, 0.3);
-  --yt-spec-filled-button-text: #030303;
-  --yt-spec-selected-nav-text: #fff
+  --yt-spec-general-background-b: #0f0f0f !important;
+  --yt-spec-general-background-c: #030303 !important;
+  --yt-spec-error-background: #f9f9f9 !important;
+  --yt-spec-10-percent-layer: rgba(255, 255, 255, 0.1) !important;
+  --yt-spec-snackbar-background: #030303 !important;
+  --yt-spec-snackbar-background-updated: #f9f9f9 !important;
+  --yt-spec-badge-chip-background: rgba(255, 255, 255, 0.1) !important;
+  --yt-spec-verified-badge-background: rgba(255, 255, 255, 0.25) !important;
+  --yt-spec-call-to-action-faded: rgba(62, 166, 255, 0.3) !important;
+  --yt-spec-call-to-action-hover: #6ebcff !important;
+  --yt-spec-brand-button-background-hover: #990412 !important;
+  --yt-spec-brand-link-text-faded: rgba(255, 78, 69, 0.3) !important;
+  --yt-spec-filled-button-focus-outline: rgba(255, 255, 255, 0.7) !important;
+  --yt-spec-static-overlay-button-hover: rgba(255, 255, 255, 0.5) !important;
+  --yt-spec-mono-filled-hover: #d9d9d9 !important;
+  --yt-spec-commerce-filled-hover: #65b8ff !important;
+  --yt-spec-mono-tonal-hover: rgba(255, 255, 255, 0.2) !important;
+  --yt-spec-commerce-tonal-hover: #515561 !important;
+  --yt-spec-static-overlay-filled-hover: #e6e6e6 !important;
+  --yt-spec-static-overlay-tonal-hover: rgba(255, 255, 255, 0.2) !important;
+  --yt-spec-paper-tab-ink: rgba(255, 255, 255, 0.3) !important;
+  --yt-spec-filled-button-text: #030303 !important;
+  --yt-spec-selected-nav-text: #fff !important;
 }
 
 
@@ -153,7 +158,9 @@ async function preference() {
       if (style) {
         stylesheet = document.createElement("style");
         stylesheet.setAttribute("id", "mytube");
+        stylesheet.innerText = styleCode;
         if (document.head) {
+
           document.head.appendChild(stylesheet);
         }
       }
