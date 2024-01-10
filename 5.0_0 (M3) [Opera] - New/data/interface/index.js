@@ -45,12 +45,19 @@ async function preference() {
       })
   });
 
+  var f = new Promise(function(resolve, reject){
+      chrome.storage.sync.get({"color4": "#c7c7c7"}, function(options){
+          resolve(options.color4);
+      })
+  });
+
 
   const enabled = await a;
   const style = await b;
   const color1 = await c;
   const color2 = await d;
   const color3 = await e;
+  const color4 = await f;
 
 
   const $checkboxLabel1 = document.querySelector("[data-message=enabled]");
@@ -101,6 +108,39 @@ async function preference() {
     // Persist
     await chrome.storage.sync.set({ color1 });
     $colorBox1.value = color1;
+
+  });
+
+  const $colorBox2 = document.querySelector("input[name=color2]");
+  $colorBox2.value = color2;
+
+  $colorBox2.addEventListener("change", async (event) => {
+    const color2 = event.currentTarget.value;
+    // Persist
+    await chrome.storage.sync.set({ color2 });
+    $colorBox1.value = color2;
+
+  });
+
+  const $colorBox3 = document.querySelector("input[name=color3]");
+  $colorBox3.value = color3;
+
+  $colorBox3.addEventListener("change", async (event) => {
+    const color3 = event.currentTarget.value;
+    // Persist
+    await chrome.storage.sync.set({ color3 });
+    $colorBox3.value = color3;
+
+  });
+
+  const $colorBox4 = document.querySelector("input[name=color4]");
+  $colorBox4.value = color4;
+
+  $colorBox4.addEventListener("change", async (event) => {
+    const color4 = event.currentTarget.value;
+    // Persist
+    await chrome.storage.sync.set({ color4 });
+    $colorBox4.value = color4;
 
   });
 

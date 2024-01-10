@@ -13,7 +13,6 @@
       "service_worker": "background.js"
    },
    "content_scripts": [ {
-      "css": [ "content-style.css" ],
       "js": [ "bundled-content-script.js" ],
       "matches": [ "*://youtube.com/*", "*://www.youtube.com/*", "*://m.youtube.com/*", "*://*.music.youtube.com/*" ]
    } ],
