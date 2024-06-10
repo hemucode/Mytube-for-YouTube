@@ -50,11 +50,6 @@ async function myTubeForYoutube(){
   const exID =  chrome.runtime.getManifest().id;
 
   styleCode = `
-  #button.ytd-menu-renderer yt-icon.ytd-menu-renderer,
-  icon-shape > div{
-    background-image: url() !important;
-  }
-
   ::-webkit-scrollbar {
     background: #${color5} !important;
   }
