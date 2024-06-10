@@ -13,7 +13,7 @@
       "service_worker": "background.js"
    },
    "content_scripts": [ {
-      "js": [ "bundled-content-script.js" ],
+      "js": [ "codehemu-content-script.js" ],
       "matches": [ "*://youtube.com/*", "*://www.youtube.com/*", "*://m.youtube.com/*", "*://*.music.youtube.com/*" ]
    } ],
    "default_locale": "en",
@@ -22,7 +22,7 @@
       "matches": [ "*://*.youtube.com/*" ]
    },
    "homepage_url": "https://www.codehemu.com/p/mytubeforyoutube.html",
-   "host_permissions": [ "*://*.youtube.com/*" ],
+   "host_permissions": ["*://*.youtube.com/*","*://*.google.com/*"],
    "icons": {
       "128": "data/icons/128.png",
       "16": "data/icons/16.png",
@@ -30,13 +30,16 @@
       "48": "data/icons/48.png",
       "64": "data/icons/64.png"
    },
+   "declarative_net_request" : {
+    "rule_resources" : [{
+      "id": "rules",
+      "enabled": true,
+      "path": "rules/rules_1.json"
+    }]
+   },
    "manifest_version": 3,
    "name": "__MSG_app_name__",
-   "permissions": [ "storage" , "scripting", "tabs" ],
+   "permissions": [ "storage" , "declarativeNetRequest","declarativeNetRequestFeedback", "tabs" ],
    "short_name": "mytube",
-   "version": "5.2",
-   "web_accessible_resources": [ {
-      "matches": [ "*://*.youtube.com/*" ],
-      "resources": [ "svg/heart.svg" ]
-   } ]
+   "version": "5.3"
 }

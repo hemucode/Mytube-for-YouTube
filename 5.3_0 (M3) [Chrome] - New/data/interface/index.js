@@ -22,8 +22,8 @@ async function preference() {
   });
 
   var b = new Promise(function(resolve, reject){
-      chrome.storage.sync.get({"style": true}, function(options){
-          resolve(options.style);
+      chrome.storage.sync.get({"mytube_enabled": true}, function(options){
+          resolve(options.mytube_enabled);
       })
   });
 
