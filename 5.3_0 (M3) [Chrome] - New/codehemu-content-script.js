@@ -4,15 +4,28 @@
  *  License - https://github.com/hemucode/Mytube-for-YouTube/license ( CSS: MIT License)
  */
 
-/**
- * Changes light color to dark color.
- * @returns {Promise<#000000>} A Promise that resolves light color to dark color.
- */
+const WEBSTORE = `https://chrome.google.com/webstore/detail/${chrome.runtime.id}`;
+const POPUP_RESTRICTION_DATE = "popupRestrictionKey";
+const POPUP_RATE_DATE = "popupRateDateKey";
+const MIN_RATE_POPUP_GAPE_DAY =  1000 * 60 * 60 * 24 * 3; // 3 days
 
-function LightenDarkenColor(col, amt) {
-  col = parseInt(col, 16);
-  return (((col & 0x0000FF) + amt) | ((((col >> 8) & 0x00FF) + amt) << 8) | (((col >> 16) + amt) << 16)).toString(16);
+const LightenDarkenColor = (col, amt) => {
+  try {
+    col = parseInt(col, 16);
+    return "#"+(((col & 0x0000FF) + amt) | ((((col >> 8) & 0x00FF) + amt) << 8) | (((col >> 16) + amt) << 16)).toString(16);
+  } catch (e) {
+    return col;
+  }
 }
+
+const isIframe = () => {
+  try {
+    return window.self !== window.top;
+  } catch (e) {
+    return true;
+  }
+};
+
 
 async function myTubeForYoutube(){
   var cPromise = new Promise(function(resolve, reject){
@@ -47,13 +60,12 @@ async function myTubeForYoutube(){
   const color6 = LightenDarkenColor(color1.substring(1), 15);
   const color7 = LightenDarkenColor(color1.substring(1), 12);
 
-  const exID =  chrome.runtime.getManifest().id;
 
   styleCode = `
-  ::-webkit-scrollbar {
-    background: #${color5} !important;
+  html,
+  html[dark]{
+    scrollbar-color: ${color2} ${color5} !important
   }
-
   ytd-masthead {
     background:${color1} !important;
   }
@@ -124,21 +136,21 @@ async function myTubeForYoutube(){
   }
 
   html {
-    -ytd-searchbox-border-color: #${color5} !important;
+    -ytd-searchbox-border-color: ${color5} !important;
     --ytd-searchbox-legacy-border-color: ${color2} !important;
     --ytd-searchbox-legacy-border-shadow-color: ${color1} !important;
-    --ytd-searchbox-legacy-button-color: #${color5} !important;
+    --ytd-searchbox-legacy-button-color: ${color5} !important;
     --ytd-searchbox-legacy-button-border-color: ${color2} !important;
     --ytd-searchbox-legacy-button-focus-color: #e9e9e9;
     --ytd-searchbox-legacy-button-hover-color: #f0f0f0;
     --ytd-searchbox-legacy-button-hover-border-color: #c6c6c6;
     --ytd-searchbox-legacy-button-icon-color: #333;
     --ytd-searchbox-text-color: ${color3} !important;
-    --ytd-searchbox-background: #${color5} !important;
+    --ytd-searchbox-background: ${color5} !important;
     --yt-spec-text-primary: ${color2} !important;
     --yt-spec-text-secondary: ${color3} !important;
     --yt-spec-text-primary-inverse: #fff !important;
-    --yt-spec-base-background: #${color5} !important;
+    --yt-spec-base-background: ${color5} !important;
     --yt-spec-raised-background: #212121 !important;
     --yt-spec-menu-background: #282828 !important;
     --yt-spec-inverted-background: #f1f1f1 !important;
@@ -158,7 +170,7 @@ async function myTubeForYoutube(){
     --yt-spec-touch-response: #fff !important;
     --yt-spec-touch-response-inverse: #000 !important;
     --yt-spec-brand-icon-active: ${color3} !important;
-    --yt-spec-brand-icon-inactive: #${color4} !important;
+    --yt-spec-brand-icon-inactive: ${color4} !important;
     --yt-spec-brand-button-background: #c00 !important;
     --yt-spec-brand-link-text: #ff4e45 !important;
     --yt-spec-wordmark-text: #fff !important;
@@ -202,10 +214,10 @@ async function myTubeForYoutube(){
     --yt-spec-brand-background-solid: #212121 !important;
     --yt-spec-brand-background-primary: ${color1} !important;
     --yt-spec-brand-background-secondary: ${color1} !important;
-    --yt-spec-general-background-a: #${color6} !important;
-    --yt-spec-general-background-b: #${color7} !important;
-    --yt-spec-general-background-c: #${color5} !important;
-    --yt-lightsource-section4-color: #${color5} !important;
+    --yt-spec-general-background-a: ${color6} !important;
+    --yt-spec-general-background-b: ${color7} !important;
+    --yt-spec-general-background-c: ${color5} !important;
+    --yt-lightsource-section4-color: ${color5} !important;
     --yt-spec-error-background: #f9f9f9 !important;
     --yt-spec-10-percent-layer: ${color2} !important;
     --yt-spec-snackbar-background: #030303 !important;
@@ -242,7 +254,7 @@ class myStyle {
   start() {
     let headElement = document.head || document.getElementsByTagName("head")[0];
     if (!headElement) return void setTimeout((() => {
-      start()
+      new myStyle().start();
     }), 100);
 
     if (!document.getElementById("mytube")) {
@@ -268,7 +280,7 @@ class CosmeticFilter {
     let bodyElement = document.body || document.getElementsByTagName("body")[0];
 
     if (!headElement || !bodyElement) return void setTimeout((() => {
-      start()
+      new CosmeticFilter(this.adBlockSelectors,this.removeVideoAdsScript).start();
     }), 100);
 
     const newCssContent = `
@@ -323,6 +335,7 @@ class CosmeticFilter {
         bodyElement.appendChild(divEl);
     }
 
+
     if (!this.adBlockSelectors) {
       return;
     }
@@ -368,7 +381,6 @@ class SkipVideoAds {
           document.querySelector(".ytp-skip-ad-button")?.click();
           document.querySelector(".ytp-ad-skip-button-modern")?.click();
           document.querySelector(".ytp-ad-survey")?.click();
-          
         }
       })(),
       function () {
@@ -392,8 +404,184 @@ class SkipVideoAds {
 }
 
 
+class Dialog {
+  isUpdatePopupEnabled = "";
+  isRateUsPopupEnabled = "";
+  isMessage = "";
+
+  constructor(isUpdatePopupEnabled ,isRateUsPopupEnabled ,isMessage) {
+    this.isUpdatePopupEnabled = isUpdatePopupEnabled;
+    this.isRateUsPopupEnabled = isRateUsPopupEnabled;
+    this.isMessage = isMessage;
+  }
+
+  start() {
+    if (isIframe()) {
+      return;
+    }
+
+    try {
+      chrome.storage.local.get(
+        [
+          POPUP_RATE_DATE,
+          POPUP_RESTRICTION_DATE,
+        ],
+        async (result) => {
+          const now = Date.now();
+          const popup_date = result[POPUP_RESTRICTION_DATE];
+          const rate_date = result[POPUP_RATE_DATE];
+
+          if (this.isUpdatePopupEnabled) {
+            this.createDialogPopup("NEW UPDATE", WEBSTORE, rate_date);
+          }else if(this.isMessage) {
+            this.createDialogPopup(this.isMessage, WEBSTORE, rate_date);
+          }else if(this.isRateUsPopupEnabled){
+            if (popup_date && rate_date) {
+              if (popup_date + rate_date < now) {
+                this.createDialogPopup(chrome.i18n.getMessage("rate") ,`${WEBSTORE}/reviews`, rate_date + MIN_RATE_POPUP_GAPE_DAY);
+              }
+            }else{
+               this.createDialogPopup(chrome.i18n.getMessage("rate") ,`${WEBSTORE}/reviews`, MIN_RATE_POPUP_GAPE_DAY);
+            } 
+          }
+
+      });
+    }catch(err) {
+      console.log(err.message);
+    }
+
+  }
+
+  appendPopup(dialog) {
+    domReady(() => {
+      document.body.appendChild(dialog);
+    });
+  }
+
+  handlePopupClose(dialog, storageKeyRestriction) {
+    document.body.removeChild(dialog);
+
+    chrome.storage.local.set(storageKeyRestriction, () => {
+      if (chrome.runtime.lastError) {
+        console.error(chrome.runtime.lastError);
+      }
+    });
+  }
+
+  createDialogPopup(text, link, rate_date) {
+    const handleClose = () => {
+      this.handlePopupClose(dialog, {
+        [POPUP_RATE_DATE]: rate_date,
+        [POPUP_RESTRICTION_DATE]: Date.now(),
+      });
+    };
+
+    // Create dialog
+    const dialog = document.createElement("DIV");
+    dialog.classList.add("mytube-dialog");
+
+    // Create closeIcon
+    const closeIcon = document.createElement("A");
+    closeIcon.classList.add("mytube-close-icon");
+    closeIcon.appendChild(document.createTextNode(" "));
+    closeIcon.addEventListener("click", handleClose);
+    dialog.appendChild(closeIcon);
+
+    // Create header
+    const header = document.createElement("DIV");
+    header.appendChild(
+      document.createTextNode(chrome.i18n.getMessage("app_name"))
+    );
+    header.classList.add("mytube-dialog-header");
+    dialog.appendChild(header);
+
+    // Create ShareLink
+    const webstoreLink = document.createElement("A");
+    webstoreLink.classList.add("mytube-webstore-link");
+    webstoreLink.setAttribute("href", link);
+    webstoreLink.setAttribute("target", "_blank");
+    webstoreLink.appendChild(
+      document.createTextNode(text)
+    );
+
+    webstoreLink.addEventListener("click", handleClose);
+    dialog.appendChild(webstoreLink);
+
+    const stylesheet = document.createElement("style");
+    stylesheet.type = "text/css";
+    stylesheet.appendChild(
+      document.createTextNode(`
+      .mytube-dialog {
+        right: 10px;
+        z-index: 99999999999;
+        top: 68px;
+        padding: 0;
+        margin: 0;
+        border-radius: 4px;
+        border: 1px solid white;
+        text-align: center;
+        display: none;
+        background-color: #000000c7;
+        position: fixed;
+      }
+
+      .mytube-close-icon {
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 10px;
+        height: 10px;
+        opacity: 0.8;
+      }
+      .mytube-close-icon:hover {
+        opacity: 1;
+      }
+      .mytube-close-icon:before, .mytube-close-icon:after {
+        position: absolute;
+        left: 5px;
+        content: ' ';
+        height: 10px;
+        width: 2px;
+        background-color: white;
+      }
+      .mytube-close-icon:before {
+        transform: rotate(45deg);
+      }
+      .mytube-close-icon:after {
+        transform: rotate(-45deg);
+      }
+
+      .mytube-dialog-header {
+        font-size: 16px;
+        padding: 16px 24px;
+        color: white;
+      }
+
+      .mytube-webstore-link {
+        display: block;
+        font-size: 13px;
+        color: white;
+        padding: 16px 24px;
+        text-decoration: none;
+        opacity: 0.8;
+        border-top: 1px solid white;
+        text-transform: uppercase;
+      }
+
+      .mytube-webstore-link:hover {
+        opacity: 1;
+      }
+    `)
+    );
+    dialog.appendChild(stylesheet);
+    dialog.style.display = "block";
+
+    this.appendPopup(dialog);
+  }
 
 
+}
 
 function domReady(callback) {
   if (document.readyState === "complete") {
@@ -405,6 +593,7 @@ function domReady(callback) {
   }
 }
 
+
 chrome.runtime.sendMessage(
   {
     action: "PAGE_READY",
@@ -413,6 +602,7 @@ chrome.runtime.sendMessage(
     const pageUrl = new URL(window.location.href)
     if (/youtube\.com/.test(window.location.origin)) {
       info(adBlockSelectors);
+      //console.log(adBlockSelectors);
     }
   }
 );
@@ -424,14 +614,11 @@ async function info(adBlockSelector){
     })
   });
 
-
   var adBlockSelectorsPromise = new Promise(function(resolve, reject){
       chrome.storage.sync.get({"adBlockingSelectors": adBlockSelector}, function(options){
           resolve(options.adBlockingSelectors);
     })
   });
-
-
 
   var skipButtonContainerPromise = new Promise(function(resolve, reject){
       chrome.storage.sync.get({"skipButtonContainer": ".ytp-ad-skip-button-container"}, function(options){
@@ -451,16 +638,39 @@ async function info(adBlockSelector){
     })
   });
 
+  var isUpdatePopupEnabledPromise = new Promise(function(resolve, reject){
+      chrome.storage.sync.get({"isUpdatePopupEnabled": false}, function(options){
+          resolve(options.isUpdatePopupEnabled);
+    })
+  });
+
+  var isRateUsPopupEnabledPromise = new Promise(function(resolve, reject){
+      chrome.storage.sync.get({"isRateUsPopupEnabled": true}, function(options){
+          resolve(options.isRateUsPopupEnabled);
+    })
+  });
+
+
+  var isMessagePromise = new Promise(function(resolve, reject){
+      chrome.storage.sync.get({"isMessage": ""}, function(options){
+          resolve(options.isMessage);
+    })
+  });
+
   const enabled = await codehemu;
   const adBlockSelectors = await adBlockSelectorsPromise;
   const skipButtonContainer = await skipButtonContainerPromise;
   const videoCurrentTime = await videoCurrentTimePromise;
   const videoDurationLessTime = await videoDurationLessTimePromise;
+  const isUpdatePopupEnabled = await isUpdatePopupEnabledPromise;
+  const isRateUsPopupEnabled = await isRateUsPopupEnabledPromise;
+  const isMessage = await isMessagePromise;
+
 
   const filters = [
       new CosmeticFilter(adBlockSelectors),
-      //new Dialog(popupConfig),
-      new SkipVideoAds(skipButtonContainer,videoCurrentTime,videoDurationLessTime)
+      new SkipVideoAds(skipButtonContainer, videoCurrentTime, videoDurationLessTime),
+      new Dialog(isUpdatePopupEnabled, isRateUsPopupEnabled, isMessage)
   ];
    
   if (enabled) {
@@ -490,4 +700,5 @@ async function info(adBlockSelector){
   }
 
 }
+
 
