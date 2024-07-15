@@ -1,0 +1,17 @@
+{
+   "app_description": {
+      "message": "Odstráni všetky nepríjemné reklamy a bannery z YouTube!"
+   },
+   "app_name": {
+      "message": "Mytube pre Youtube™"
+   },
+   "full_description": {
+      "message": "Mytube pre Youtube™ je rozšírenie prehľadávača na filtrovanie obsahu a blokovanie reklám, ktoré blokuje všetky reklamy na Youtube ™. Umožňuje používateľom zabrániť zobrazeniu prvkov stránky, napríklad reklám. Toto rozšírenie blokuje reklamné pruhy, reklamné klipy alebo dokonca predbežné reklamy, ktoré sa zvyčajne zobrazia pred samotným videom na Youtube. devoloper od thegayen"
+   },
+   "rate": {
+      "message" :"Pomôžte nám a ohodnoťte nás!"
+   },
+   "donate":{
+      "message" :"darovanie"
+   }
+}
