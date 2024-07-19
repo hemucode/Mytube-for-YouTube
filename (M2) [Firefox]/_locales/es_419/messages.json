@@ -1,0 +1,17 @@
+{
+   "app_description": {
+      "message": "¡Elimina todos los anuncios y banners molestos de YouTube!"
+   },
+   "app_name": {
+      "message": "Mytube por Youtube™"
+   },
+   "full_description": {
+      "message": "Mytube por Youtube™ es una extensión de navegador de filtrado de contenido y bloqueo de anuncios que bloquea todos los anuncios en Youtube ™. Permite a los usuarios evitar que se muestren elementos de la página, como anuncios. Banner, Ad-Clips o incluso anuncios pre-roll que normalmente ves antes de que el video real en Youtube sean bloqueados por esta extensión. devorador de thegayen"
+   },
+   "rate": {
+      "message" :"Por favor ayúdenos y califíquenos"
+   },
+   "donate":{
+      "message" :"donación"
+   }
+}

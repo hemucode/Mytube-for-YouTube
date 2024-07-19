@@ -1,0 +1,17 @@
+{
+   "app_description": {
+      "message": "從 YouTube 中刪除所有煩人的廣告和橫幅！"
+   },
+   "app_name": {
+      "message": "Mytube 為了 Youtube™"
+   },
+   "full_description": {
+      "message": "Mytube 為了 Youtube™一種內容過濾和廣告攔截瀏覽器擴展程序，可攔截 Youtube™ 上的所有廣告。它允許用戶阻止顯示頁面元素，例如廣告。 您通常在 Youtube 上的實際視頻被此擴展程序阻止之前看到的橫幅、廣告剪輯甚至前貼片廣告。 devoloper by thegayen"
+   },
+   "rate": {
+      "message" :"請幫助和評價我們！"
+   },
+   "donate":{
+      "message" :"捐款"
+   }
+}

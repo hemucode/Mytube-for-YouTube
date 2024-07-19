@@ -1,0 +1,17 @@
+{
+   "app_description": {
+      "message": "Rimuove tutti i fastidiosi annunci e banner da YouTube!"
+   },
+   "app_name": {
+      "message": "Mytube per Youtube™"
+   },
+   "full_description": {
+      "message": "Mytube per Youtube™ è un'estensione del browser per il filtraggio dei contenuti e il blocco degli annunci che blocca tutti gli annunci su Youtube™. Consente agli utenti di impedire la visualizzazione di elementi della pagina, come gli annunci pubblicitari. Banner, Ad-Clip o anche annunci preroll che di solito vedi prima che il video effettivo su Youtube venga bloccato da questa estensione. devoloper di thegayen"
+   },
+   "rate": {
+      "message" :"Per favore aiutaci e valutaci"
+   },
+   "donate":{
+      "message" :"donazione"
+   }
+}

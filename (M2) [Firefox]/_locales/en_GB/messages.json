@@ -1,0 +1,17 @@
+{
+   "app_description": {
+      "message": "Removes all annoying ads and banners from YouTube!"
+   },
+   "app_name": {
+      "message": "Mytube for Youtube™"
+   },
+   "full_description":{
+      "message" :"Mytube for Youtube™ is a content filtering and ad blocking browser extension which blocks all ads on Youtube™.It allows users to prevent page elements, such as advertisements, from being displayed. Banner, Ad-Clips or even preroll ads you usually see before the actual video on Youtube are blocked by this extension. devoloper by thegayen"
+   },
+   "rate":{
+      "message": "Please help and rate us!"
+   },
+   "donate": {
+      "message":"donation"
+   }
+}
