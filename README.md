@@ -2,6 +2,7 @@
 Removes all annoying ads and banners from YouTube!
 
 https://chromewebstore.google.com/detail/mytube-for-youtube/mlolgpcecboccnknllkhfdafmphinbon
+https://addons.opera.com/en/extensions/details/mytube-for-youtubetm/
 
 Mytube for Youtube™ is a content filtering and ad blocking browser extension which blocks all ads on Youtube™.
 It allows users to prevent page elements, such as advertisements, from being displayed. 
